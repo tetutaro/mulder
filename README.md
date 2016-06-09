@@ -3,7 +3,6 @@
 http://qiita.com/supermomonga/items/3a3da5518ae72b35ce8b  
 これのpython版
 
-> $ setup.py build  
-> $ setup.py install
+> $ pip install git+https://github.com/tetutaro/mulder
 
 これでいつでも `mulder` できます
