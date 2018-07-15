@@ -17,7 +17,7 @@ def mulder(script):
     real = m[:]
     while 1:
         shuffle(m)
-        yield ''.join(m[:2]+["、"]+m[2:])
+        yield ''.join(m[:2] + ["、"] + m[2:])
         if m == real:
             return
 
