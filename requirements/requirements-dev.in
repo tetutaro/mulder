@@ -1,0 +1,10 @@
+black
+coverage
+isort
+mypy
+pytest
+ruff
+pytest-black
+pytest-ruff
+pytest-isort
+pytest-mypy

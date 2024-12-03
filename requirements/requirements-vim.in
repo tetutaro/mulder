@@ -1,0 +1,4 @@
+-c requirements-dev.txt
+
+python-lsp-server
+python-lsp-ruff

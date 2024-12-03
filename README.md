@@ -3,6 +3,6 @@
 http://qiita.com/supermomonga/items/3a3da5518ae72b35ce8b  
 これのpython版
 
-> $ pip install git+https://github.com/tetutaro/mulder
+> $ pipx install git+https://github.com/tetutaro/mulder.git
 
 これでいつでも `mulder` できます
