@@ -1,0 +1,12 @@
+cost-factor = 700
+bos-feature = BOS/EOS,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*
+eval-size = 10
+unk-eval-size = 4
+config-charset = utf8
+
+output-format-type = json
+
+node-format-json = {"surface":"%m","pos1":"%f[0]","pos2":"%f[1]","pos3":"%f[2]","pos4":"%f[3]","ctype":"%f[4]","cform":"%f[5]","base":"%f[10]"}\n
+unk-format-json = {"surface":"%m","pos1":"%f[0]","pos2":"%f[1]","pos3":"%f[2]","pos4":"%f[3]","ctype":"%f[4]","cform":"%f[5]","base":"%m"}\n
+bos-format-json =
+eos-format-json =

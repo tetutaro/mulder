@@ -20,6 +20,8 @@ clean-system:
 
 .PHONY: update-requirements
 update-requirements:
+	uv pip compile requirements/requirements.in --universal \
+		--output-file requirements/requirements.txt
 	uv pip compile requirements/requirements-dev.in --universal \
 		--output-file requirements/requirements-dev.txt
 	uv pip compile requirements/requirements-vim.in --universal \
@@ -31,12 +33,14 @@ setup-environment:
 	uv venv
 	. .venv/bin/activate
 	uv pip sync \
+		requirements/requirements.txt \
 		requirements/requirements-dev.txt \
 		requirements/requirements-vim.txt
 
 .PHONY: sync-environment
 sync-environment:
 	uv pip sync \
+		requirements/requirements.txt \
 		requirements/requirements-dev.txt \
 		requirements/requirements-vim.txt
 

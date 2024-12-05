@@ -1,3 +1,35 @@
+[project]
+name = "mulder"
+version = "0.2.0"
+description = "モルダー、あなた疲れてるのよ"
+readme = "README.md"
+authors = [
+    { name = "Tetsutaro Maruyama", email = "tetsutaro.maruyama@gmail.com" }
+]
+requires-python = ">=3.11"
+classifiers = ["Private :: Do Not Upload"]
+dependencies = [
+    "annotated-types==0.7.0",
+    "fugashi==1.4.0",
+    "pydantic==2.10.3",
+    "pydantic-core==2.27.1",
+    "typing-extensions==4.12.2",
+    "unidic-lite==1.0.8",
+]
+
+[project.scripts]
+mulder = "src.mulder.mulder:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "src/mulder/*.py",
+    "src/mulder/mecabrc",
+]
+
 [tool.black]
 line-length = 80
 
@@ -8,14 +40,14 @@ multi_line_output = 3
 include_trailing_comma = true
 combine_as_imports = true
 src_paths = [
-    "mulder",
+    "src/mulder",
 ]
 virtual_env = ".venv"
 
 [tool.ruff]
 line-length = 80
 src = [
-    "mulder",
+    "src/mulder",
 ]
 target-version = "py311"
 
@@ -45,7 +77,7 @@ section-order = [
     "local-folder",
 ]
 known-local-folder = [
-    "mulder",
+    "src/mulder",
 ]
 split-on-trailing-comma = true
 
